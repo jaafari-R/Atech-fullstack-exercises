@@ -1,11 +1,16 @@
 /* CSS Properties reference: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference#index */
 
 /* Note: in CSS a child element inherits some of the CSS properties the belong to its parent */
-
+/* Note: CSS selectors with higher specifity overwrite poperties in selectors with lower specifities
+    specifities have 3 values to determine its priority (ids.classes.elements) ids is the highest,
+    and elements is the lowest*/
+/* Note: using '!important' overwrites a property no matter what it's specifity (highest priority)*/
+/* Note: the specifity of chained selectors is the combination of
+    the specifity values associated with each selector within it= */
 
 
 /* Element Selector - styles all elements of a specified type */
-/* Element selecters have the value 0.0.1 */
+/* Element selecters have the specifity of 0.0.1 */
 div {
     width: 350px;
     height: 130px;
@@ -19,7 +24,7 @@ p {
 
 /* Class selector (start with a '.') - styles all the elements assigned a specific class */
 /* We can assign a class or multiple classes to an element using the class attribute */
-/* Class selectors have the value 0.1.0 */
+/* Class selectors have the specifity of 0.1.0 */
 .nav-bar {
     position: fixed;
 }
@@ -43,7 +48,7 @@ p {
 
 
 /* ID selector (start with '#') - styles the elemnt with the specified id */
-/* Element selecters have the value 1.0.0 */
+/* Element selecters have the specifity of 1.0.0 */
 /* Note: make sure that an ID is only assigned to one element in each html page */
 #about-me {
     font-family: sans-serif;
