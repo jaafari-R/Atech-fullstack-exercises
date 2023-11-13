@@ -1,12 +1,16 @@
 /* CSS Properties reference: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference#index */
 
 /* Note: in CSS a child element inherits some of the CSS properties the belong to its parent */
+/* We can specify CSS using the style attribute(inline) */
+
 /* Note: CSS selectors with higher specifity overwrite poperties in selectors with lower specifities
     specifities have 3 values to determine its priority (ids.classes.elements) ids is the highest,
-    and elements is the lowest*/
+    and elements is the lowest
+*/
 /* Note: using '!important' overwrites a property no matter what it's specifity (highest priority)*/
 /* Note: the specifity of chained selectors is the combination of
-    the specifity values associated with each selector within it= */
+    the specifity values associated with each selector within it= 
+*/
 
 
 /* Element Selector - styles all elements of a specified type */
