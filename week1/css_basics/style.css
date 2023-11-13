@@ -1,0 +1,75 @@
+/* CSS Properties reference: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference#index */
+
+/* Note: in CSS a child element inherits some of the CSS properties the belong to its parent */
+
+
+
+/* Element Selector - styles all elements of a specified type */
+/* Element selecters have the value 0.0.1 */
+div {
+    width: 350px;
+    height: 130px;
+    background-color: #eee; /* #e74c3c; */
+    padding-left: 10px;
+}
+p {
+    font-size: small;
+}
+
+
+/* Class selector (start with a '.') - styles all the elements assigned a specific class */
+/* We can assign a class or multiple classes to an element using the class attribute */
+/* Class selectors have the value 0.1.0 */
+.nav-bar {
+    position: fixed;
+}
+
+.heading {
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.tomato {
+    color: tomato;
+}
+
+.gross-color {
+    color: #a3c010;
+}
+
+.nice-color {
+    color: #03bbbb;
+}
+
+
+/* ID selector (start with '#') - styles the elemnt with the specified id */
+/* Element selecters have the value 1.0.0 */
+/* Note: make sure that an ID is only assigned to one element in each html page */
+#about-me {
+    font-family: sans-serif;
+    color: salmon;
+}
+
+
+/* Pseudo Selectors - style items based on a specific case/functionality */
+button:hover {
+    background-color: green;
+    color: white;
+    border: 4px solid white;
+    cursor: pointer;
+}
+/* Pseudo Selectors - style a specific child element */
+p:nth-child(2) {
+    color: #a3c010;
+}
+
+
+/* combined selectors */
+/* using '>' - points to a selector that is a direct descendent of another */
+div > p {
+    color: #03bbbb;
+}
+/* using ' ' - points to a selector that is a (direct or non-direct) descendent of another */
+div p {
+    font-weight: bolder;
+}
