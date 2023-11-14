@@ -46,9 +46,37 @@ let newValue = (value || 5); // set to 5, because value is undefined
 
 /* We can prompt the user for input using the prompt function */
 /* If the user closes the prompt instead of submitting a value, 'null' is returned */
+const userName = prompt("What's your name?")
 if(userName) {
     console.log("The user's name is", userName);
 }
 else {
     console.log("The user have not entered his name");
 }
+
+
+/* Arrays */
+let employeeNames = ["Ramadan", "Raed", "Rami", "Rena"]
+// array size
+console.log(employeeNames.length)
+/* Arrays are 0-indexed and their members can be accessed using the syntax 'arr[index]'*/
+console.log(employeeNames[2]) // prints Rami in the console
+/* items can be inserted to the end of the Array using the push() method */
+employeeNames.push("Roni");
+
+/* Spread operator */
+/* the syntax '...arr' represents 'arr[0], arr[1], ..., arr[-1]' */
+// arr[-1] means the last element of the array
+/* Spread operator can be used to insert the elements in an array into another array */
+employeeNames.push(...employeeNames); // same as employeeNames.push("Ramadan", "Raed", "Rami", "Rena")
+// note that this is different than employeeNames.push(employeeNames), as this appends a reference of the array to itself
+
+/* Splice - removes elements (in a specific range) from an array and returns them */
+employeeNames.splice(1,2); // remove two items, starting at index 1
+/* Splice can insert a set of items at the remove position by passing an array to it */
+employeeNames.splice(1, 1, ...["Sami", "Foad", "Karem"]);
+console.log(employeeNames);
+
+
+
+12
