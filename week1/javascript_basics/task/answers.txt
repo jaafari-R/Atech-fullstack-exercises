@@ -1,0 +1,17 @@
+/* section 7 - Exercise 1 */
+----------------------------
+false
+true
+true
+false
+true
+true
+false
+true
+true <=X= false
+
+/* section 7 - Exercise 2 */
+----------------------------
+c = 3
+b = 3
+a = 3
