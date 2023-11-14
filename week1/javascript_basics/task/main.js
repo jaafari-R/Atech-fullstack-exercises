@@ -10,7 +10,7 @@ console.log( 52 !== "52" );
 console.log( undefined != null );
 
 
-console.log("\n-------\n")
+console.log("\n-------\n");
 
 
 /* section 7 - Exercise 2 */
@@ -26,7 +26,7 @@ console.log("b:", b);
 console.log("c:", c);
 
 
-console.log("\n-------\n")
+console.log("\n-------\n");
 
 
 /* section 9 exercise */
@@ -50,7 +50,7 @@ const teslaAIBotInitConversation = (boughtTesla, yearOfTeslaPurchase, isUSCitize
 teslaAIBotInitConversation(true, 2014, true, 2018);
 
 
-console.log("\n-------\n")
+console.log("\n-------\n");
 
 
 /* section 11 exercise */
@@ -67,7 +67,7 @@ numbers.unshift(0);
 console.log(numbers);
 
 
-console.log("\n-------\n")
+console.log("\n-------\n");
 
 
 /* section 13 exercise 1 */
@@ -93,7 +93,7 @@ if(p1.age == p2.age) {
 }
 
 
-console.log("\n-------\n")
+console.log("\n-------\n");
 
 
 /* section 13 exercise 2 */
@@ -116,7 +116,7 @@ const library = {
 console.log(library);
 
 
-console.log("\n-------\n")
+console.log("\n-------\n");
 
 
 /* section 13 exercise 3 */
@@ -171,7 +171,7 @@ else {
 }
 
 
-console.log("\n-------\n")
+console.log("\n-------\n");
 
 
 /* section 13 Extension */
@@ -197,15 +197,106 @@ const fridgeFixPrice = kitchen.fridge.price / 2;
 // Geraldine does not care about the kitchen unless the radish expires :D
 if(raddishExpireTime >= 0) {
     if(kitchen.hasOven && kitchen.fridge.works) {
-        console.log(`${owner}’s ${kitchen.fridge.items[1]} expired ${raddishExpireTime} day ago. Weird, considering her fridge works. Luckily, she has an oven to cook the ${kitchen.fridge.items[1]} in.`);
+        console.log(`${kitchen.owner}’s ${kitchen.fridge.items[1]} expired ${raddishExpireTime} day ago. Weird, considering her fridge works. Luckily, she has an oven to cook the ${kitchen.fridge.items[1]} in.`);
     }
     else if(kitchen.hasOven && !kitchen.fridge.works) {
-        console.log(`${owner}’s ${kitchen.fridge.items[1]} expired ${raddishExpireTime} day ago. Probably because her fridge doesn’t work. Luckily, she has an oven to cook the ${kitchen.fridge.items[1]} in. And she’ll have to pay ${fridgeFixPrice} to fix the fridge.`);
+        console.log(`${kitchen.owner}’s ${kitchen.fridge.items[1]} expired ${raddishExpireTime} day ago. Probably because her fridge doesn’t work. Luckily, she has an oven to cook the ${kitchen.fridge.items[1]} in. And she’ll have to pay ${fridgeFixPrice} to fix the fridge.`);
     }
     else if(!kitchen.hasOven && kitchen.fridge.works) {
-        console.log(`${owner}’s ${kitchen.fridge.items[1]} expired ${raddishExpireTime} day ago. Weird, considering her fridge works. Too bad she doesn’t have an oven to cook the ${kitchen.fridge.items[1]} in.`);
+        console.log(`${kitchen.owner}’s ${kitchen.fridge.items[1]} expired ${raddishExpireTime} day ago. Weird, considering her fridge works. Too bad she doesn’t have an oven to cook the ${kitchen.fridge.items[1]} in.`);
     }
     else { // !kitchen.hasOven && !kitchen.fridge.works
-        console.log(`${owner}’s ${kitchen.fridge.items[1]} expired ${raddishExpireTime} day ago. Probably because her fridge doesn’t work. Too bad she doesn’t have an oven to cook the ${kitchen.fridge.items[1]} in. And she’ll have to pay ${fridgeFixPrice} to fix the fridge.`);
+        console.log(`${kitchen.owner}’s ${kitchen.fridge.items[1]} expired ${raddishExpireTime} day ago. Probably because her fridge doesn’t work. Too bad she doesn’t have an oven to cook the ${kitchen.fridge.items[1]} in. And she’ll have to pay ${fridgeFixPrice} to fix the fridge.`);
+    }
+}
+
+
+console.log("\n-------\n");
+
+
+/* section 15 Exercise 1 */
+const names = ["Ashley", "Donovan", "Lucas"]
+const ages = [23, 47, 18]
+const people = []
+
+for(let personIndex in names) {
+    people.push({
+        name: names[personIndex],
+        age: ages[personIndex]
+    });
+}
+// console.log(people);
+
+
+console.log("\n-------\n");
+
+
+/* section 15 Exercise 2 */
+for(let person of people) {
+    console.log(`${person.name} is ${person.age} years old`);
+}
+
+
+console.log("\n-------\n");
+
+
+/* section 15 Exercise 3 */
+const posts = [
+    {id: 1, text: "Love this product"},
+    {id: 2, text: "This is the worst. DON'T BUY!"},
+    {id: 3, text: "So glad I found this. Bought four already!"}
+]
+const deletePostId = 2;
+const deletePostIndex = posts.findIndex(post => post.id === 2);
+posts.splice(deletePostIndex, 1);
+console.log(posts);
+
+
+console.log("\n-------\n");
+
+
+/* section 15 Exercise 4 */
+// I am replacing the word 'posts' with 'reviews' here
+const reviews = [
+    {
+        id: 1, 
+        text: "Love this product",
+        comments: []
+    },
+    { 
+        id: 2, 
+        text: "This is the worst. DON'T BUY!", 
+        comments: [
+            {id: 1, text: "Idiot has no idea"}, 
+            {id: 2, text:"Fool!"}, 
+            {id: 3, text: "I agree!"}
+        ]
+    },
+    {
+        id: 3, 
+        text: "So glad I found this. Bought four already!",
+        comments: []
+    }
+]
+const reviewIndex = reviews.findIndex(review => review.id === 2);
+const commentIndex = reviews[reviewIndex].comments.findIndex(comment => comment.id === 3);
+reviews[reviewIndex].comments.splice(commentIndex, 1);
+console.log(reviews)
+
+
+console.log("\n-------\n");
+
+
+/* section 15 Extention */
+const dictionary = {
+    "A": ["Aardvark", "Abacus", "Actually", "Atomic"],
+    "B": ["Banana", "Bonkers", "Brain", "Bump"],
+    "C": ["Callous", "Chain", "Coil", "Czech"]
+}
+
+for(let letter of Object.keys(dictionary)) {
+    console.log("Words that begin with " + letter + ":")
+    for(let word of dictionary[letter]) {
+        console.log(`\t${word}`);
     }
 }

@@ -79,4 +79,18 @@ console.log(employeeNames);
 
 
 
-12
+// Todo? 12 missing
+
+
+
+let companies = ["Tesla", "Amazon", "Google", "Microsoft"];
+/* loop - for in - goes through the indices*/
+for(let index in companies) {
+    console.log(companies[index]);
+}
+console.log("------------------")
+/* loop - for of - goes through items */
+for(let company of companies) {
+    console.log(company);
+}
+/* JS has the casual while and for(;;) loops as well */
