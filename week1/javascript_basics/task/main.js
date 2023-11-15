@@ -39,7 +39,7 @@ const teslaAIBotInitConversation = (boughtTesla, yearOfTeslaPurchase, isUSCitize
             console.log("Are you satisfied with the Tesla you bought?")
         }
     }
-    else if(boughtTesla) {
+    else if(boughtTesla) { // not a US citizen
         console.log("Would you like to move to the US?");
     }
     else {
@@ -147,7 +147,7 @@ else {
 
 
 /* section 13 exercise 3.2 */
-customerName = undefined;
+customerName = null;
 // keep prompting until the user submits a name
 while(!customerName) {
     customerName = prompt('Please enter the name for your reservation');
@@ -176,6 +176,7 @@ console.log("\n-------\n");
 
 /* section 13 Extension */
 const date = 3
+const DAMAGE_RATE = 2;
 
 const kitchen = {
     owner: "Geraldine",
@@ -192,21 +193,27 @@ const kitchen = {
 }
 
 const raddishExpireTime = date - kitchen.fridge.items[1].expiryDate;
-const fridgeFixPrice = kitchen.fridge.price / 2;
-
+const fridgeFixPrice = kitchen.fridge.price / DAMAGE_RATE;
 // Geraldine does not care about the kitchen unless the radish expires :D
-if(raddishExpireTime >= 0) {
+if(raddishExpireTime > 0) {
+    const expireText = `${kitchen.owner}’s ${kitchen.fridge.items[1].name} expired ${raddishExpireTime} day ago.`;
+    const fridgeWorksText = `Weird, considering her fridge works.`;
+    const fridgeDoesntWorkText = `Probably because her fridge doesn’t work.`;
+    const fridgeFixText = `And she’ll have to pay ${fridgeFixPrice} to fix the fridge.`;
+    const ovenWorksText = `Luckily, she has an oven to cook the ${kitchen.fridge.items[1].name} in.`;
+    const ovenDoesntWorkText = `Too bad she doesn’t have an oven to cook the ${kitchen.fridge.items[1].name} in.`;
+
     if(kitchen.hasOven && kitchen.fridge.works) {
-        console.log(`${kitchen.owner}’s ${kitchen.fridge.items[1]} expired ${raddishExpireTime} day ago. Weird, considering her fridge works. Luckily, she has an oven to cook the ${kitchen.fridge.items[1]} in.`);
+        console.log(`${expireText} ${fridgeWorksText} ${ovenWorksText}`);
     }
     else if(kitchen.hasOven && !kitchen.fridge.works) {
-        console.log(`${kitchen.owner}’s ${kitchen.fridge.items[1]} expired ${raddishExpireTime} day ago. Probably because her fridge doesn’t work. Luckily, she has an oven to cook the ${kitchen.fridge.items[1]} in. And she’ll have to pay ${fridgeFixPrice} to fix the fridge.`);
+        console.log(`${expireText} ${fridgeDoesntWorkText} ${ovenWorksText} ${fridgeFixText}`);
     }
     else if(!kitchen.hasOven && kitchen.fridge.works) {
-        console.log(`${kitchen.owner}’s ${kitchen.fridge.items[1]} expired ${raddishExpireTime} day ago. Weird, considering her fridge works. Too bad she doesn’t have an oven to cook the ${kitchen.fridge.items[1]} in.`);
+        console.log(`${expireText} ${fridgeWorksText} ${ovenDoesntWorkText}`);
     }
     else { // !kitchen.hasOven && !kitchen.fridge.works
-        console.log(`${kitchen.owner}’s ${kitchen.fridge.items[1]} expired ${raddishExpireTime} day ago. Probably because her fridge doesn’t work. Too bad she doesn’t have an oven to cook the ${kitchen.fridge.items[1]} in. And she’ll have to pay ${fridgeFixPrice} to fix the fridge.`);
+        console.log(`${expireText} ${fridgeDoesntWorkText} ${ovenDoesntWorkText} ${fridgeFixText}`);
     }
 }
 
@@ -222,7 +229,7 @@ const people = []
 for(let personIndex in names) {
     people.push({
         name: names[personIndex],
-        age: ages[personIndex]
+        age: ages[personIndex] || -1000
     });
 }
 // console.log(people);
