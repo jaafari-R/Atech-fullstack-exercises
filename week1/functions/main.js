@@ -8,15 +8,15 @@ console.log(isEven(17));
 
 
 /* Exercies 2 */
-const printEvenNumbers = (numbers) => {
+const printOddNumbers = (numbers) => {
     for(let number of numbers) {
-        if(isEven(number)) {
+        if(!isEven(number)) {
             console.log(number);
         }
     }
 }
 const numberList = [1,2,3,4,5,981,98412];
-printEvenNumbers(numberList)
+printOddNumbers(numberList)
 
 
 /* Exercise 3 */
