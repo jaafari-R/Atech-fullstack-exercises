@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+}
+
+/* Here we've use the grid-template-areas, because the overall layout is static! Everything inside though, that's a different story
+ */
+ #chat{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 15fr 1fr;
+    grid-template-areas: 
+    "f c"
+    "f i";
+}
+
+#friends{
+    grid-area: f;
+    display: grid;
+    grid-gap: 100px;
+    background-color: rgb(149, 40, 218);
+    padding-top: 20px;
+    padding-inline: 20px;
+    align-items: center;
+}
+
+#friends > p {
+    background-color: rgb(164, 58, 230);
+    padding-block: 5px;
+}
+
+#chatbox{
+    grid-area: c;
+    display: grid;
+    padding-top: 100px;
+    padding-inline: 15px;
+}
+
+.text-container {
+    display: grid;
+    grid-template-columns: "10fr 1fr";
+    grid-template-areas: "text time";
+    align-items: center;
+    height:fit-content;
+    padding: 7px;
+    border-radius: 5px;
+    grid-gap: 10px;
+}
+
+.left {
+    justify-self: left;
+    background-color: #b8b8b8;
+}
+
+.right {
+    justify-self: right;
+    background-color:aquamarine;
+}
+
+.text {
+    justify-self: left;
+    grid-area: text;
+}
+
+.time {
+    font-size:x-small;
+    grid-area: time;
+    align-self: end;
+}
+
+#input{
+    grid-area: i;
+    display: grid;
+    grid-template-columns: 8fr 2fr;
+    grid-template-areas: "ii id";
+    text-align: center;
+}
+
+#input > input {
+    grid-area: ii;
+}
+
+#input > div {
+    grid-area: id;
+    display: grid;
+    align-items: center;
+    background-color:lightcoral;
+    color: white;
+}
