@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+}
+
+#container {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 14fr 1fr;
+    grid-template-areas: 
+    "h"
+    "m"
+    "f";
+}
+
+#header {
+    grid-area: h;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: "logo . . home about contact";
+    padding-inline: 1em;
+    padding-block: 0.5em;
+    border-bottom: 1px solid #666;
+    box-shadow: 1px 1px 1px 1px #ccc;
+}
+
+.logo {
+    grid-area: logo;
+}
+
+.home {
+    grid-area: home;
+}
+
+.about {
+    grid-area: about;
+}
+
+.contact {
+    grid-area: contact;
+}
+
+#main {
+    grid-area: m;
+}
+
+#foot {
+    grid-area: f;
+    display: grid;
+    align-items: center;
+    text-align: end;
+    border-top: 1px solid #666;
+}
