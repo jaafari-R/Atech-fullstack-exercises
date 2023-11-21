@@ -1,0 +1,28 @@
+#container {
+    min-height: 100vh;
+    min-width: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#container form {
+    display: grid;
+    grid-gap: 10px;
+}
+
+#container form input,
+#container form div {
+    width: 500px;
+    height: 100px;
+    font-size: x-large;
+    text-align: center;
+}
+
+#container form div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: navy;
+}
