@@ -8,12 +8,14 @@
 </head>
 <body>
     <div id="chat">
-        <div id="friends">
+        <div id="friends-nav">
             <h3>Friends</h3>
-            <p>Freya</p>
-            <p>Linda</p>
-            <p>Kenan</p>
-            <p>Theresa</p>
+            <div id="friends">
+                <p>Freya</p>
+                <p>Linda</p>
+                <p>Kenan</p>
+                <p>Theresa</p>
+            </div>
         </div>
         <div id="chatbox">
             <div class="text-container left">
@@ -38,8 +40,8 @@
             </div>
         </div>
         <div id="input">
-            <input type="text" placeholder="Type a message">
-            <div>Send</div>
+            <input id="msgBox" type="text" placeholder="Type a message">
+            <div onclick="sendMsg()">Send</div>
         </div>
     </div>
 </body>

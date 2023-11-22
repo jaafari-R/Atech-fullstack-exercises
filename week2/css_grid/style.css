@@ -14,13 +14,17 @@
     "f i";
 }
 
-#friends{
+#friends-nav{
     grid-area: f;
-    display: grid;
-    grid-gap: 100px;
     background-color: rgb(149, 40, 218);
     padding-top: 20px;
     padding-inline: 20px;
+}
+
+#friends {
+    padding-top: 100px;
+    display: grid;
+    grid-gap: 100px;
     align-items: center;
 }
 
@@ -79,6 +83,13 @@
 
 #input > input {
     grid-area: ii;
+    border-left: none;
+    text-indent: 20px;
+    font-size: x-large;
+}
+
+#input > input:focus {
+    outline: none;
 }
 
 #input > div {
