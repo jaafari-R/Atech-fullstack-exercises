@@ -1,4 +1,4 @@
-const NUM_OF_BOXES_IN_ROW = 4;
+const NUM_OF_BOXES_IN_ROW = 8;
 const NUM_OF_BOXES_IN_COLUMN = 4;
 const NUM_OF_BOXES = NUM_OF_BOXES_IN_ROW * NUM_OF_BOXES_IN_COLUMN;
 const GAP_BETWEEN_BOXES = 1; // %
@@ -16,7 +16,8 @@ const createBox = (id) => {
     
     const box = document.createElement('div');
     box.setAttribute("id", `box${id}`);
-    box.style.backgroundColor = "yellow"
+    const initColor = Math.floor(Math.random()*255*255*255).toString(16);
+    box.style.backgroundColor = `#${initColor}`
     box.onmouseover = () => {
         const randomColor = Math.floor(Math.random()*255*255*255).toString(16);
         box.style.backgroundColor = `#${randomColor}`;
