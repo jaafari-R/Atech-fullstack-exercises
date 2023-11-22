@@ -42,10 +42,14 @@ body, html {
     justify-content: right;
 }
 
-.form-button button {
+.form-button div {
     margin-right: 30px;
     border: none;
     border-radius: 5px;
     padding: 10px;
     background-color: rgb(72, 202, 159);
+}
+
+.form-button div:hover {
+    cursor: pointer;
 }

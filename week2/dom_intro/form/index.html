@@ -11,26 +11,28 @@
         <form class="info-form" action="">
             <div class="input-block">
                 <label for="">Name</label>
-                <input type="text">
+                <input id="name" type="text">
             </div>
             <div class="nested-input-row">
                 <div class="input-block">
                     <label for="">Desired Salary</label>
-                    <input type="number">
+                    <input id="salary" type="number">
                 </div>
                 <div class="input-block">
                     <label for="">Birthday</label>
-                    <input type="date">
+                    <input id="birthday" type="date">
                 </div>
             </div>
             <div class="input-block">
                 <label for="">Phone</label>
-                <input type="number">
+                <input id="phone" type="number">
             </div>
             <div class="form-button">
-                <button>Submit</button>
+                <div onclick="validateInput()">Submit</div>
             </div>
         </form>
     </div>
+
+    <script src="main.js"></script>
 </body>
 </html>
