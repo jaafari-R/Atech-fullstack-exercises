@@ -27,6 +27,24 @@ const moveBallDown = () => {
     ball.style.top = newLeftVal;
 }
 
+ball.addEventListener("keydown", (event) => {
+    const pressedKey = event.key;
+    switch(pressedKey) {
+        case "ArrowLeft":
+            moveBallLeft();
+            break;
+        case "ArrowRight":
+            moveBallRight();
+            break;
+        case "ArrowUp":
+            moveBallUp();
+            break;
+        case "ArrowDown":
+            moveBallDown();
+            break;
+    }
+});
+
 
 const header = document.createElement("h1")
 header.innerHTML = "The Best Game Ever2"
