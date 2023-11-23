@@ -16,10 +16,10 @@ body, html {
     justify-content: center;
 }
 
-.info-form {
+#info-form {
     display: grid;
-    width: 30%;
-    height: 30%;
+    min-width: 30%;
+    min-height: 30%;
     border: 8px solid rgb(72, 202, 159);
     border-radius: 6px;
     padding: 20px;
@@ -52,4 +52,12 @@ body, html {
 
 .form-button div:hover {
     cursor: pointer;
+}
+
+/* #error-msg {
+    color: red;
+} */
+
+#valid-submit {
+    color: green;
 }

@@ -11,7 +11,7 @@ const sendMsg = () => {
     const textP = "<p>" + msg + "</p>";
     const timeP = "<p>" + "10:00" + "</p>";
     newMsg.setAttribute("class", "text-container left");
-    newMsg.innerHTML = text + time;
+    newMsg.innerHTML = textP + timeP;
 
     chatBox.appendChild(newMsg);
 }
