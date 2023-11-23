@@ -33,7 +33,7 @@ const moveBall = (move) => {
 }
 
 for(let key of Object.keys(MOVES)) {
-    document.getElementById(key).addEventListener("click", () => { moveBall(MOVES[key]) });
+    document.getElementById(key).addEventListener("click", () => moveBall(MOVES[key]));
 }
 
 window.addEventListener("keydown", (event) => {
