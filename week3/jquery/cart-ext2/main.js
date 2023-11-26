@@ -7,6 +7,7 @@ function renderStockText(stockType) {
     $(cart[stockType].element).text(stockText);
 }
 
+// remove a single item from a stock when clicked 
 function addStockClick(stockType) {
     $(cart[stockType].element).click(function() {
         if(cart[stockType].count == 1) {
@@ -20,6 +21,7 @@ function addStockClick(stockType) {
     });
 }
 
+// add 1 available item to the cart if it's in-stock
 $(".item").click(function() {
     if($(this).data().instock) {
         const stockType = this.innerHTML;
