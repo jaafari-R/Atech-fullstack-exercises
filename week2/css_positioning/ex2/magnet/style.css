@@ -1,0 +1,44 @@
+#container {
+    position: relative;
+    background-color: white;
+    margin: auto;
+    margin-top: 200px;
+    height: 350px;
+    width: 400px;
+}
+
+.steel {
+    position: absolute;
+    background-color: gray;
+    top: 0;
+    height: 70px;
+    width: 70px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.bar {
+    position: absolute;
+    background-color: red;
+    top: 70px;
+    height: 230px;
+    width: 70px;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
+
+.bottom-bar {
+    position: absolute;
+    background-color: red;
+    bottom: 0;
+    height: 70px;
+    width: 400px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}

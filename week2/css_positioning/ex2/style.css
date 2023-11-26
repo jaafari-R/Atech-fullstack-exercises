@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);;
+    grid-template-areas: 
+    "m m m m m m"
+    "b1 b2 b3 b4 b5 t";
+    margin: auto;
+    margin-top: 10%;
+    padding-inline: 30px;
+    padding-block: 20px;
+    width: 30%;
+    background-color: rgb(153, 81, 248);
+    align-items:end;
+}
+
+.bar {
+    width: 20px;
+    background-color: rgb(59, 59, 59);
+}
+
+#money {
+    grid-area: m;
+}
+
+#bar1 {
+    grid-area: b1;
+    height: 20px;
+}
+
+#bar2 {
+    grid-area: b2;
+    height: 60px;
+}
+
+#bar3 {
+    grid-area: b3;
+    height: 100px;
+}
+
+#bar4 {
+    grid-area: b4;
+    height: 80px;
+}
+
+#bar5 {
+    grid-area: b5;
+    height: 50px;
+}
+
+#time {
+    grid-area: t;
+}
