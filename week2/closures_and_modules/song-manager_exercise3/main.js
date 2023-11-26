@@ -3,13 +3,13 @@ const YOTUBE_WATCH_URL = "https://www.youtube.com/watch?";
 const SongsManager = function() {
     const _songs = [];
 
-    const addSong = function(songName, songUrl) {
+    const addSong = (songName, songUrl) => {
         // extract the song id on utube & save it
         const songId = songUrl.replace(YOTUBE_WATCH_URL, "");
         _songs[songName] = songId;
     }
 
-    const getSong = function(songName) {
+    const getSong = (songName) => {
         if(_songs[songName] === undefined)
             return "Unknown song :(";
         return YOTUBE_WATCH_URL + _songs[songName];

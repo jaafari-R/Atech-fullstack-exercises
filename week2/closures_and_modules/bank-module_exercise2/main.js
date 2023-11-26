@@ -1,11 +1,11 @@
 const Bank = function() {
     let _money = 500;
 
-    const depositCash = function(cash) {
+    const depositCash = (cash) => {
         _money += cash;
     }
 
-    const checkBalance = function() {
+    const checkBalance = () => {
         console.log(_money);
     }
 
