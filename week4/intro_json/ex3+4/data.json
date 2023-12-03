@@ -1,0 +1,36 @@
+{
+    "name": "Cow",
+    "weight": "1",
+    "weight-unit": "ton",
+    "endangered": false,
+    "eats": [
+        {
+            "name": "grass",
+            "amount-percent": 40
+        },
+        {
+            "name": "leaves",
+            "amount-percent": 10
+        },
+        {
+            "name": "hay",
+            "amount-percent": 40
+        },
+        {
+            "name": "fruits",
+            "amount-percent": 3
+        },
+        {
+            "name": "vegetables",
+            "amount-percent": 7
+        }
+    ],
+    "preditors": [
+        "cat",
+        "dog",
+        "wolf",
+        "lion",
+        "tiger"
+    ],
+    "taste-rating": 5 
+}
