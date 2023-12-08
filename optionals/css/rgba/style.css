@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    background-image: url("field.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#transparent {
+    background-color: rgba(20, 30, 40, 20%);
+    color: rgba(0, 0, 0, 30%);
+    padding-inline: 5%;
+}
+
+#cover {
+    background-color: navy;
+    color: wheat;
+    padding-inline: 5%;
+}
