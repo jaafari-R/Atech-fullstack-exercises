@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body, html {
+    width: 100vw;
+    height: 100vh;
+}
+
+#ex1-sections {
+    height: 20%;
+    display: flex;
+}
+
+#ex1-section1 {
+    background-color: aqua;
+    width: 20px;
+    height: 100%;
+    display: inline-block;
+}
+
+#ex1-section2 {
+    background-color: green;
+    width: calc(100% - 20px);
+    height: 100%;
+    display: inline-block;
+}
+
+#ex2-container {
+    display: flex;
+    width: 40%;
+    margin-inline: auto;
+    background-color: blue;
+    height: 20%;
+}
+
+.ex2-section {
+    background-color: yellow;
+    border: 2px solid black;
+    width: calc(100% / 3);
+    height: 100%;
+}
