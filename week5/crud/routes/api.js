@@ -1,6 +1,5 @@
 const { Router } = require("express");
-const wordCounter = require("./words-counter");
-const wordsCounter = require("./words-counter");
+const wordCounter = require("../server/words-counter");
 
 const router = Router();
 
@@ -80,13 +79,28 @@ router.delete("/word/", (req, res) => {
     }
 });
 
-// most popular word
 router.get("/popular-word/", (req, res) => {
-    res.send(wordCounter.mostPopularWord());
+    const [ mostPopularWord ] = wordCounter.mostPopularWords(1);
+    if(mostPopularWord) {
+        res.send({text: mostPopularWord.word, count: mostPopularWord.count });
+    }
+    // TODO add error
+    else {
+        res.send({text: "N/A", count: 0});
+    }
 });
 
-// 5 most popular words
-// TODO
+// gets the most popular 'count' words 
+router.get("/popular-word/:count", (req, res) => {
+    const count = Number.parseInt(req.params.count);
+    const mostPopularWords = wordCounter.mostPopularWords(count)
+        .map(word => {
+            const wordObj = {};
+            wordObj[word.word] = word.count;
+            return wordObj;
+        });
+    res.send({ranking: mostPopularWords});
+});
 
 router.get("/total-words-count", (req, res) => {
     res.send({

@@ -60,19 +60,19 @@ class WordCounter {
         return false;
     }
 
-    mostPopularWord() {
-        let currMax = 0;
-        let popularWord = "";        
-        Object.keys(this.wordsCount).forEach(word => {
-            if(this.wordsCount[word] > currMax) {
-                currMax = this.wordsCount[word];
-                popularWord = word;
-            }
-        });
-        return {
-            text: popularWord,
-            count: currMax
-        };
+    // TODO add errors
+    mostPopularWords(wordsCount) {
+        if(!(typeof wordsCount === "number") || 
+            wordsCount <= 0 ||
+            Object.keys(this.wordsCount).length === 0)
+                return [];
+
+        // transform wordsCount obj into an array
+        const allWords = Object.keys(this.wordsCount).map(word => {
+            return {word, count: this.wordsCount[word]}
+        })
+
+        return allWords.sort((word1, word2) => word2.count - word1.count).splice(0, wordsCount);
     }
 
     totalWordsCount() {
