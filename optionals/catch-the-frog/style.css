@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+}
+
+#header {
+    margin-top: 100px;
+    margin-inline: auto;
+    width: 600px;
+    text-align: center;
+    background-color: aquamarine;
+}
+
+#field {
+    position: relative;;
+    margin-inline: auto;
+    background-color: green;
+    width: 600px;
+    height: 400px;
+}
+
+.frog {
+    position: absolute;
+    color: black;
+}
+
+#info {
+    text-align: center;
+    margin-inline: auto;
+    width: 600px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 50px;
+}
+
+.info-box {
+    display: grid;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+#start-game {
+    background-color: aquamarine;
+    border: 1px black solid;
+}
