@@ -6,5 +6,5 @@ const visitorSchema = new Schema({
     visitedPlanets: [{type: Schema.Types.ObjectId, ref: "Planet"}]
 })
 
-const Visitor = model("visitor", visitorSchema);
+const Visitor = model("Visitor", visitorSchema);
 module.exports = Visitor;
