@@ -1,0 +1,56 @@
+.form-line,
+div form .login input,
+div form .login button {
+  margin: auto;
+  display: block;
+  margin-block: 10px;
+}
+div {
+  width: 100%;
+}
+div form {
+  width: fit-content;
+  text-align: center;
+  margin-inline: auto;
+  margin-top: 5%;
+  padding: 50px;
+}
+div form .login {
+  background-color: #e50000;
+  padding: 30px;
+}
+div form .login h2 {
+  color: white;
+}
+div form .login input {
+  width: 80%;
+  height: 20px;
+  text-indent: 5px;
+}
+div form .login button {
+  width: 100px;
+  height: 25px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: white;
+}
+div form .register {
+  background-color: #ce0000;
+  padding: 30px;
+}
+div form .register button {
+  width: 80%;
+  height: 40px;
+  font-size: large;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  background-color: white;
+}
+div form .register i {
+  color: #ce0000;
+}
+div form .register h4 {
+  color: white;
+}

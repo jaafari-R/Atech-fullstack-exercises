@@ -1,0 +1,78 @@
+#container {
+  background-image: url(food-table.jpeg);
+  width: fit-content;
+  margin-top: 5%;
+  margin-inline: auto;
+  padding-inline: 200px;
+  padding-block: 100px;
+}
+.person {
+  background-color: #3e4049f4;
+  padding-inline: 30px;
+  padding-top: 30px;
+  width: 550px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.person .info {
+  color: white;
+}
+.person .info i.fa-arrow-left {
+  color: #fc3859;
+  font-size: large;
+}
+.person .info p {
+  font-size: small;
+  color: #aaaa;
+}
+.person .info .phone {
+  padding-top: 15px;
+  border-top: dashed #aaaa 2px;
+}
+.person .review {
+  height: 200px;
+  width: 300px;
+  text-align: center;
+}
+.person .review .review-top {
+  background-color: #f5f5f5;
+  height: 150px;
+}
+.person .review .review-top img {
+  margin-top: -30px;
+  margin-bottom: 20px;
+  width: 80px;
+  height: 80px;
+  border-radius: 60px;
+}
+.person .review .review-top .lit {
+  color: #f3ba00;
+}
+.person .review .review-bottom {
+  height: 100px;
+  background-color: #fc3859;
+  text-align: center;
+  margin-top: 0;
+  padding-bottom: 10px;
+  display: grid;
+}
+.person .review .review-bottom textarea {
+  height: 70px;
+  width: 80%;
+  display: block;
+  margin: auto;
+  margin-top: -35px;
+  border: none;
+  padding: 10px;
+  resize: none;
+}
+.person .review .review-bottom button {
+  cursor: pointer;
+  color: white;
+  background: none;
+  border: none;
+  font-size: medium;
+  align-self: center;
+  justify-self: center;
+  width: fit-content;
+}

@@ -1,0 +1,90 @@
+#container {
+    background-image: url(food-table.jpeg);
+    width: fit-content;
+    margin-top: 5%;
+    margin-inline: auto;
+    padding-inline: 200px;
+    padding-block: 100px;
+}
+.person {
+    background-color: #3e4049f4;
+    padding-inline: 30px;
+    padding-top: 30px;
+    width: 550px;
+    // padding-bottom: 50px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    .info {
+        color: white;
+        
+        i.fa-arrow-left {
+            color: rgb(252, 56, 89);
+            font-size: large;
+        }
+
+        p {
+            font-size: small;
+            color: #aaaa;
+        }
+
+        .phone {
+            padding-top: 15px;
+            border-top: dashed #aaaa 2px;
+        }
+    }
+
+    .review {
+        height: 200px;
+        width: 300px;
+        text-align: center;
+
+        .review-top {
+            background-color: rgb(245, 245, 245);
+            height: 150px;
+
+            img {
+                margin-top: -30px;
+                margin-bottom: 20px;
+                width: 80px;
+                height: 80px;
+                border-radius: 60px;
+            }
+
+            .lit {
+                color: rgb(243, 186, 0)
+            }
+        }
+        .review-bottom {
+            height: 100px;
+            background-color: rgb(252, 56, 89);
+            text-align: center;
+            margin-top: 0;
+            padding-bottom: 10px;
+            display: grid;
+            
+            textarea {
+                height: 70px;
+                width: 80%;
+                display: block;
+                margin: auto;
+                margin-top: -35px;
+                border:none;
+                padding: 10px;
+                resize: none
+            }
+
+            button {
+                cursor: pointer;
+                color: white;
+                background: none;
+                border: none;
+                font-size:medium;
+                align-self: center;
+                justify-self: center;
+                width: fit-content;
+            }
+        }
+    }
+}
