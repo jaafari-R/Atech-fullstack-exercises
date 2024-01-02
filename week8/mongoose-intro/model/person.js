@@ -10,7 +10,6 @@ class PersonModel {
     };
 
     static setAgeById(id, newAge) {
-        console.log(id, newAge)
         Person.findByIdAndUpdate(id, {age: newAge})
         .then();
     }
