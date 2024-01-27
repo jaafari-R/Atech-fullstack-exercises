@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@keyframes nav-expand {
+    from {
+        width: 0px;
+    }
+    to {
+        width: 100px;
+    }
+}
+@keyframes nav-collapse {
+    from {
+        width: 100px;
+    }
+    to {
+        width: 0px;
+    }
+}
+
+nav {
+    background-color: pink;
+    padding: 10px;
+}
+
+i {
+    font-size: larger;
+    cursor: pointer;
+}
+
+#pages {
+    display: grid;
+    grid-gap: 20px;
+    background-color: gold;
+    overflow-x: hidden;
+    width: 0px;
+}
+
+#pages.active {
+    width: 100px;
+    animation-name: nav-expand;
+    animation-duration: 1s;
+}
+
+#pages.inactive {
+    animation-name: nav-collapse;
+    animation-duration: 1s;
+}
