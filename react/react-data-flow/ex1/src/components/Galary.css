@@ -1,0 +1,22 @@
+.galary {
+    width: 50%;
+    text-align: center;
+    margin-inline: auto;
+    position: relative;
+}
+
+.galary > img {
+    height: 500px;
+}
+
+.prevBtn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.nextBtn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
