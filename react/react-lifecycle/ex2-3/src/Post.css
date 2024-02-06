@@ -1,0 +1,8 @@
+.post {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.post > .title {
+    margin-bottom: 10px;
+}
